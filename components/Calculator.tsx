@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 import { Calculator as CalcIcon, Zap, Target, Settings, RotateCcw } from 'lucide-react'
 import { calculateProjectorRecommendations, formatNumber, CalculatorInputs } from '@/lib/calculator-logic'
 import { CalculationResult } from '@/lib/calculator-data'
+import CalculatorVisualizer from './CalculatorVisualizer'
+import MagneticButton from './MagneticButton'
+import GlassCard from './GlassCard'
 
 export default function Calculator() {
   const [inputs, setInputs] = useState<CalculatorInputs>({
@@ -107,13 +110,13 @@ export default function Calculator() {
                   <Settings className="w-6 h-6 text-magic-gold mr-2" />
                   Parámetros
                 </h2>
-                <button
+                <MagneticButton
                   onClick={resetCalculator}
-                  className="text-gray-400 hover:text-magic-gold transition-colors"
-                  title="Resetear calculadora"
+                  className="text-gray-400 hover:text-magic-gold transition-colors p-2"
+                  magneticStrength={0.1}
                 >
                   <RotateCcw className="w-5 h-5" />
-                </button>
+                </MagneticButton>
               </div>
 
               <div className="space-y-6">
@@ -298,26 +301,34 @@ export default function Calculator() {
               )}
             </div>
 
-            {/* Visual Simulator Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-8 bg-gray-900 p-6 rounded-2xl border border-gray-800"
+            {/* 3D Visual Simulator */}
+            <GlassCard
+              variant="dark"
+              className="mt-8 p-6"
+              hover={false}
             >
-              <h3 className="text-xl font-bold text-white mb-4">Simulador Visual</h3>
-              <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-magic-gold/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Target className="w-10 h-10 text-magic-gold" />
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Target className="w-6 h-6 text-magic-gold mr-2" />
+                Simulador 3D
+              </h3>
+              
+              {results.length > 0 ? (
+                <CalculatorVisualizer 
+                  distance={inputs.distance}
+                  diameter={inputs.desiredDiameter}
+                  intensity={results[0]?.intensity || 500}
+                />
+              ) : (
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-magic-gold/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <Target className="w-10 h-10 text-magic-gold" />
+                    </div>
+                    <p className="text-gray-400">Ajusta los parámetros para ver la simulación 3D</p>
                   </div>
-                  <p className="text-gray-400">Simulación visual próximamente</p>
-                  <p className="text-gray-500 text-sm mt-1">
-                    Aquí podrás ver una representación visual de la proyección
-                  </p>
                 </div>
-              </div>
-            </motion.div>
+              )}
+            </GlassCard>
           </motion.div>
         </div>
       </div>

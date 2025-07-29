@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { Building, ShoppingBag, TrendingUp, Quote } from 'lucide-react'
+import GlassCard from './GlassCard'
+import ScrollReveal from './ScrollReveal'
+import ParallaxContainer from './ParallaxContainer'
 
 export default function SuccessCases() {
   const cases = [
@@ -71,14 +74,16 @@ export default function SuccessCases() {
           {cases.map((caseItem, index) => {
             const Icon = caseItem.icon
             return (
-              <motion.div
+              <ScrollReveal
                 key={caseItem.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                className="group relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl border border-gray-700 hover:border-magic-gold/50 transition-all duration-300 overflow-hidden shadow-card hover:shadow-2xl hover:transform hover:scale-105"
+                direction="up"
+                delay={index * 0.2}
               >
+                <GlassCard
+                  variant="gradient"
+                  className="group relative overflow-hidden"
+                  hover={true}
+                >
                 {/* Case Image/Visual */}
                 <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-magic-gold/20 to-transparent" />
@@ -116,9 +121,8 @@ export default function SuccessCases() {
                   </p>
                 </div>
 
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-magic-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </motion.div>
+                </GlassCard>
+              </ScrollReveal>
             )
           })}
         </div>

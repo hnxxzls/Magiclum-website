@@ -44,6 +44,17 @@ module.exports = {
       boxShadow: {
         'cta': '0 10px 40px rgba(255, 216, 0, 0.3)',
         'card': '0 8px 32px rgba(0, 0, 0, 0.3)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        'glow': '0 0 50px rgba(255, 216, 0, 0.3)',
+        'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.8)',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      textShadow: {
+        'default': '2px 2px 4px rgba(0, 0, 0, 0.8)',
+        'lg': '4px 4px 8px rgba(0, 0, 0, 0.8)',
+        'xl': '6px 6px 12px rgba(0, 0, 0, 0.8)',
       },
     },
   },

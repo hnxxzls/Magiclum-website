@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import SmoothScrollProvider from '@/components/SmoothScrollProvider'
+import CustomCursor from '@/components/CustomCursor'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -29,7 +33,12 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${inter.variable} font-inter antialiased`}>
-        {children}
+        <SmoothScrollProvider>
+          <CustomCursor />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </SmoothScrollProvider>
       </body>
     </html>
   )

@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import MagneticButton from './MagneticButton'
+import ParallaxContainer from './ParallaxContainer'
 
 interface ConversionHeroProps {
   onOpenDemo: () => void
@@ -19,9 +21,15 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
     <section className="relative min-h-screen bg-gradient-to-br from-magic-dark via-gray-900 to-black flex items-center justify-center overflow-hidden">
       {/* Geometric background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-magic-gold rotate-45"></div>
-        <div className="absolute bottom-40 right-20 w-24 h-24 border border-magic-gold rotate-12"></div>
-        <div className="absolute top-1/2 left-10 w-16 h-16 bg-magic-gold/20 blur-sm"></div>
+        <ParallaxContainer speed={0.2} direction="up">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-magic-gold rotate-45"></div>
+        </ParallaxContainer>
+        <ParallaxContainer speed={0.3} direction="down">
+          <div className="absolute bottom-40 right-20 w-24 h-24 border border-magic-gold rotate-12"></div>
+        </ParallaxContainer>
+        <ParallaxContainer speed={0.1} direction="left">
+          <div className="absolute top-1/2 left-10 w-16 h-16 bg-magic-gold/20 blur-sm"></div>
+        </ParallaxContainer>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -58,16 +66,17 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
           >
-            <button
+            <MagneticButton
               onClick={onOpenDemo}
-              className="group relative bg-magic-gold text-magic-dark text-xl font-bold px-12 py-6 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-cta hover:shadow-2xl inline-flex items-center"
+              className="group relative bg-magic-gold text-magic-dark text-xl font-bold px-12 py-6 rounded-full hover:bg-yellow-300 transition-all duration-300 shadow-cta hover:shadow-2xl inline-flex items-center"
+              magneticStrength={0.2}
             >
               <span className="mr-3">Solicitar Demo Gratuita</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               
               {/* Animated ring */}
               <div className="absolute inset-0 rounded-full border-2 border-magic-gold animate-ping opacity-20"></div>
-            </button>
+            </MagneticButton>
             
             {/* Urgency text */}
             <motion.p
