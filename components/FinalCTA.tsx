@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, Shield, Gift } from 'lucide-react'
+import MagneticButton from './MagneticButton'
+import ParallaxContainer from './ParallaxContainer'
 
 interface FinalCTAProps {
   onOpenDemo: () => void
@@ -30,8 +32,12 @@ export default function FinalCTA({ onOpenDemo }: FinalCTAProps) {
     <section className="py-20 bg-gradient-to-br from-black via-magic-dark to-gray-900 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-magic-gold rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-magic-gold rounded-full blur-3xl"></div>
+        <ParallaxContainer speed={0.2} direction="up">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-magic-gold rounded-full blur-3xl"></div>
+        </ParallaxContainer>
+        <ParallaxContainer speed={0.3} direction="down">
+          <div className="absolute bottom-20 left-20 w-64 h-64 bg-magic-gold rounded-full blur-3xl"></div>
+        </ParallaxContainer>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -98,9 +104,10 @@ export default function FinalCTA({ onOpenDemo }: FinalCTAProps) {
           transition={{ delay: 0.6 }}
           className="text-center mb-12"
         >
-          <button
+          <MagneticButton
             onClick={onOpenDemo}
-            className="group relative bg-magic-gold text-magic-dark text-2xl font-bold px-16 py-6 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-cta hover:shadow-2xl inline-flex items-center"
+            className="group relative bg-magic-gold text-magic-dark text-2xl font-bold px-16 py-6 rounded-full hover:bg-yellow-300 transition-all duration-300 shadow-cta hover:shadow-2xl inline-flex items-center"
+            magneticStrength={0.3}
           >
             <span className="mr-4">Solicitar Mi Demo Gratuita Ahora</span>
             <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
@@ -108,7 +115,7 @@ export default function FinalCTA({ onOpenDemo }: FinalCTAProps) {
             {/* Multiple animated rings */}
             <div className="absolute inset-0 rounded-full border-2 border-magic-gold animate-ping opacity-20"></div>
             <div className="absolute inset-0 rounded-full border-2 border-magic-gold animate-ping opacity-10" style={{ animationDelay: '0.5s' }}></div>
-          </button>
+          </MagneticButton>
         </motion.div>
 
         {/* Urgency and Social Proof */}

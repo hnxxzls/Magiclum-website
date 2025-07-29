@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { AlertTriangle, DollarSign, X, Clock } from 'lucide-react'
+import GlassCard from './GlassCard'
+import ScrollReveal from './ScrollReveal'
+import ParallaxContainer from './ParallaxContainer'
 
 export default function ProblemSection() {
   const problems = [
@@ -57,15 +60,16 @@ export default function ProblemSection() {
           {problems.map((problem, index) => {
             const Icon = problem.icon
             return (
-              <motion.div
+              <ScrollReveal
                 key={problem.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                className="group relative"
+                direction="up"
+                delay={index * 0.2}
               >
-                <div className="bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-danger-red/50 transition-all duration-300 hover:transform hover:scale-105 shadow-card">
+                <GlassCard
+                  variant="dark"
+                  className="p-8 group hover:border-danger-red/50 transition-all duration-300"
+                  hover={true}
+                >
                   {/* Problem icon */}
                   <div className="w-16 h-16 bg-danger-red/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-danger-red/30 transition-colors duration-300">
                     <Icon className="w-8 h-8 text-danger-red" />
@@ -86,10 +90,8 @@ export default function ProblemSection() {
                     {problem.description}
                   </p>
 
-                  {/* Hover effect background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-danger-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
-                </div>
-              </motion.div>
+                </GlassCard>
+              </ScrollReveal>
             )
           })}
         </div>

@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:www.magic-lum.cl)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": []
   }
