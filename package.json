@@ -1,0 +1,58 @@
+{
+  "name": "magic-lum-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de alta conversión para Magic-Lum - Especialistas en proyección GOBO",
+  "author": "Magic-Lum <hola@magic-lum.cl>",
+  "homepage": "https://magic-lum.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magic-lum/landing-page.git"
+  },
+  "keywords": [
+    "magic-lum",
+    "gobo",
+    "proyección led",
+    "publicidad sustentable",
+    "landing page",
+    "conversión",
+    "chile"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true npm run build",
+    "preview": "npm run build && npm run start",
+    "clean": "rm -rf .next out dist",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.294.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "tailwindcss": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "next-sitemap": "^4.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
