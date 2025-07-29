@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building, ShoppingBag, TrendingUp, MapPin, Quote } from 'lucide-react'
+import { Building, ShoppingBag, TrendingUp, Quote } from 'lucide-react'
 
 export default function SuccessCases() {
   const cases = [
