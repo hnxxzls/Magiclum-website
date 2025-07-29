@@ -6,6 +6,7 @@ import ProblemSection from '@/components/ProblemSection'
 import SolutionSection from '@/components/SolutionSection'
 import ComparisonTable from '@/components/ComparisonTable'
 import SuccessCases from '@/components/SuccessCases'
+import FAQ from '@/components/FAQ'
 import FinalCTA from '@/components/FinalCTA'
 import ConversionFooter from '@/components/ConversionFooter'
 import DemoModal from '@/components/DemoModal'
@@ -32,6 +33,9 @@ export default function ConversionLanding() {
       
       {/* Social Proof (Success Cases) */}
       <SuccessCases />
+      
+      {/* FAQ Section */}
+      <FAQ />
       
       {/* Final CTA with Irresistible Offer */}
       <FinalCTA onOpenDemo={openModal} />

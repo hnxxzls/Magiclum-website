@@ -10,27 +10,27 @@ export default function ProblemSection() {
   const problems = [
     {
       icon: AlertTriangle,
-      stat: '93%',
-      title: 'del PVC no se recicla',
-      description: 'Tu publicidad tradicional termina en vertederos, contribuyendo a la crisis ambiental.'
+      stat: '5 Ton',
+      title: 'de residuos plásticos anuales',
+      description: 'Una empresa mediana genera 5 toneladas de residuos publicitarios al año. El 93% termina en vertederos.'
     },
     {
       icon: DollarSign,
-      stat: '$17.500',
-      title: 'CLP costo por m² de recambio',
-      description: 'Cada actualización de campaña requiere nueva inversión en impresión y montaje.'
+      stat: '$2.8M',
+      title: 'CLP gastas anualmente en renovar',
+      description: 'Pendones, vallas y letreros que se deterioran cada 3-6 meses. Sin contar instalación y mano de obra.'
     },
     {
       icon: X,
       stat: 'CERO',
-      title: 'flexibilidad de cambio',
-      description: 'Una vez instalado, no puedes modificar el mensaje sin rehacer todo el proceso.'
+      title: 'capacidad de actualización',
+      description: 'Error de diseño, cambio de precio, nueva promoción = Botar todo y empezar de cero. Pérdida total.'
     },
     {
       icon: Clock,
-      stat: '72h+',
-      title: 'tiempo de producción',
-      description: 'Desde el diseño hasta la instalación, pierdes días valiosos de exposición.'
+      stat: '15 días',
+      title: 'desde idea hasta instalación',
+      description: 'Diseño, impresión, logística, instalación. Mientras tu competencia ya está vendiendo.'
     }
   ]
 
@@ -45,14 +45,15 @@ export default function ProblemSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-danger-red">La Publicidad Tradicional</span>{' '}
-            <span className="text-white">es un Residuo</span>{' '}
-            <span className="text-gray-400">Esperando a Ocurrir</span>
+            <span className="text-danger-red">¿Por Qué Sigues Pagando</span>{' '}
+            <span className="text-white">Para Contaminar</span>{' '}
+            <span className="text-gray-400">Tu Propia Ciudad?</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Mientras tu competencia sigue contaminando con pendones y vallas, 
-            tú podrías estar <strong className="text-magic-gold">proyectando el futuro</strong>.
+            Cada pendón que instalas hoy será <strong className="text-danger-red">basura mañana</strong>. 
+            Mientras tanto, pagas <strong className="text-white">sobre-costos por renovaciones constantes</strong> 
+            y pierdes <strong className="text-magic-gold">oportunidades de actualización inmediata</strong>.
           </p>
         </motion.div>
 

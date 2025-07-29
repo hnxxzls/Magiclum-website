@@ -9,42 +9,42 @@ import ParallaxContainer from './ParallaxContainer'
 export default function SuccessCases() {
   const cases = [
     {
-      id: 'renca',
-      icon: Building,
-      title: 'Municipalidad de Renca',
-      category: 'Sector Público',
-      result: 'Intervención municipal sin inversión pública inicial',
-      detail: 'Visible desde la Costanera, impacto directo en 50,000+ residentes diarios.',
-      metrics: '+200% visibilidad nocturna',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 'retail',
+      id: 'retail-chain',
       icon: ShoppingBag,
-      title: 'Retail Premium',
-      category: 'Falabella & CCU',
-      result: '35% más de flujo peatonal',
-      detail: 'Sin usar un solo pendón, logramos aumentar significativamente el tráfico en tienda.',
-      metrics: 'ROI 340% en 6 meses',
+      title: 'Cadena de Supermercados',
+      category: 'Retail Chile',
+      result: '$2.1M CLP ahorrados anualmente',
+      detail: 'Eliminamos 847 pendones/año que costaban $2.8M CLP. Con GOBO gastamos solo $680K CLP total (equipo + electricidad).',
+      metrics: '74% reducción de costos',
       image: '/api/placeholder/400/300'
     },
     {
-      id: 'events',
+      id: 'restaurant',
+      icon: Building,
+      title: 'Cadena de Restaurantes',
+      category: 'Gastronomía',
+      result: '42% más ventas en promociones',
+      detail: 'Al cambiar ofertas diarias al instante, las promociones generan 42% más ventas vs pendones estáticos.',
+      metrics: '+18% flujo de clientes',
+      image: '/api/placeholder/400/300'
+    },
+    {
+      id: 'automotive',
       icon: TrendingUp,
-      title: 'Eventos Masivos',
-      category: 'Activaciones de Marca',
-      result: 'Alcance orgánico 10x superior',
-      detail: 'Activaciones nocturnas que generan contenido viral en redes sociales.',
-      metrics: '+2M impresiones digitales',
+      title: 'Concesionaria Automotriz',
+      category: 'Sector Automotriz',
+      result: 'Eliminó 5.2 toneladas de residuos/año',
+      detail: 'Dejó de imprimir 400 pendones promocionales anuales. Ahora actualiza precios y ofertas desde el celular.',
+      metrics: '100% cero residuos',
       image: '/api/placeholder/400/300'
     }
   ]
 
   const testimonial = {
-    quote: "Magic-Lum no solo resolvió nuestro problema de sustentabilidad, sino que revolucionó completamente cómo pensamos la publicidad exterior. El retorno de inversión fue evidente desde el primer mes.",
-    author: "Patricia Morales",
-    position: "Directora de Marketing",
-    company: "Falabella Retail"
+    quote: "En 8 meses ahorramos $1.8M CLP que gastábamos en pendones. Pero lo mejor es la flexibilidad: cambiamos ofertas 3 veces por semana y las ventas aumentaron 28%. Magic-Lum nos dio ventaja competitiva real.",
+    author: "Roberto Sánchez", 
+    position: "Gerente de Operaciones",
+    company: "Cadena de Supermercados Regional"
   }
 
   return (

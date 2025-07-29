@@ -41,11 +41,12 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            <span className="text-white">Tu Publicidad Genera</span>{' '}
-            <span className="text-danger-red">5,000 Toneladas</span>{' '}
-            <span className="text-white">de Plástico al Año.</span>
+            <span className="text-white">¿Sabías que Tu Empresa</span>{' '}
+            <span className="text-danger-red">Contamina 5 Toneladas</span>{' '}
+            <span className="text-white">de Plástico al Año</span>{' '}
+            <span className="text-gray-400">Solo en Publicidad?</span>
             <br />
-            <span className="text-magic-gold">La Nuestra, Cero.</span>
+            <span className="text-magic-gold">Nosotros Eliminamos el 100% de Esos Residuos</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -55,8 +56,8 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Reemplaza pendones por <strong className="text-magic-gold">proyecciones de luz de alto impacto</strong>. 
-            Sin residuos, sin instalación compleja y con <strong className="text-white">resultados medibles</strong>.
+            <strong className="text-magic-gold">Proyección GOBO LED de alta definición</strong> que reemplaza pendones, vallas y letreros tradicionales. 
+            <strong className="text-white">Mismo impacto visual, cero residuos, 80% menos costos</strong> y cambios instantáneos desde tu celular.
           </motion.p>
 
           {/* Primary CTA */}
@@ -85,7 +86,7 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
               transition={{ delay: 1.2 }}
               className="text-sm text-gray-400 mt-4"
             >
-              ⚡ Instalación en menos de 2 horas • Sin compromiso
+              ⚡ Demo instalada en 2 horas • Verás tu logo proyectado • 100% gratis
             </motion.p>
           </motion.div>
 
@@ -97,7 +98,7 @@ export default function ConversionHero({ onOpenDemo }: ConversionHeroProps) {
             className="border-t border-gray-800 pt-8"
           >
             <p className="text-gray-400 text-sm mb-6 uppercase tracking-wider">
-              TECNOLOGÍA PROBADA POR LÍDERES:
+              +50 EMPRESAS LÍDERES YA ELIMINARON SUS RESIDUOS CON NOSOTROS:
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 hover:opacity-80 transition-opacity duration-300">
